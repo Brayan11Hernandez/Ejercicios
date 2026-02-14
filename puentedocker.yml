@@ -1,9 +1,13 @@
 services:
   paginaweb1:
     image: nginx:alpine
+    volumes:
+      - ./paginaweb1/index.html:/usr/share/nginx/html/index.html:ro
 
   paginaweb2:
     image: nginx:alpine
+    volumes:
+      - ./paginaweb2/index.html:/usr/share/nginx/html/index.html:ro
 
   conector:
     image: nginx:alpine
