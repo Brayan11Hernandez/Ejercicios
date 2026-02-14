@@ -1,0 +1,14 @@
+services:
+  paginaweb1:
+    image: nginx:alpine
+
+  paginaweb2:
+    image: nginx:alpine
+
+  conector:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    depends_on:
+      - paginaweb1
+      - paginaweb2
