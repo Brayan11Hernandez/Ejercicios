@@ -24,14 +24,16 @@ Este ejercicio levanta una infraestructura con 3 contenedores Nginx:
                |                 |
                |                 |
                v                 v
- +------------------------+  +------------------------+
- |    paginaweb1 (Nginx)  |  |    paginaweb2 (Nginx)  |
- |        puerto 80       |  |        puerto 80       |
- |  ./paginaweb1/index    |  |  ./paginaweb2/index    |
- +------------------------+  +------------------------+
+                +------------------------+  +------------------------+
+               |    paginaweb1 (Nginx)  |  |    paginaweb2 (Nginx)  |
+               |        puerto 80       |  |        puerto 80       |
+               |  ./paginaweb1/index    |  |  ./paginaweb2/index    |
+               +------------------------+  +------------------------+
+
 
 # URL Balanceador 
 - http://localhost:8080
 
 # Prueba de funcionamiento 
 <img width="2559" height="948" alt="image" src="https://github.com/user-attachments/assets/0abb27e4-6f79-49a1-88c5-518b45c5671a" />
+
