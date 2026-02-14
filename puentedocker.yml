@@ -10,9 +10,11 @@ services:
       - ./paginaweb2/index.html:/usr/share/nginx/html/index.html:ro
 
   conector:
-    image: nginx:alpine
-    ports:
-      - "8080:80"
-    depends_on:
-      - paginaweb1
-      - paginaweb2
+      image: nginx:alpine
+      ports:
+        - "8080:80"
+      volumes:
+        - ./conector/nginx.conf:/etc/nginx/nginx.conf:ro
+      depends_on:
+        - paginaweb1
+        - paginaweb2
